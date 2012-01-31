@@ -84,7 +84,7 @@ public class SimpleNotification extends Activity {
     private boolean isMyServiceRunning() {
         ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-        	Log.d(TAG, "ServiceName: "+ service.service.getClassName());
+        	//Log.d(TAG, "ServiceName: "+ service.service.getClassName());
             if ("de.Adam.MyService".equals(service.service.getClassName())) {
                 return true;
             }
