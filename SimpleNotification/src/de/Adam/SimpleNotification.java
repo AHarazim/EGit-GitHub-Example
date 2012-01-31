@@ -1,4 +1,6 @@
-package com.collabera.labs.sai;
+package de.Adam;
+
+import com.collabera.labs.sai.R;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -33,8 +35,6 @@ public class SimpleNotification extends Activity {
         start.setOnClickListener(new OnClickListener() {
         	
         	public void onClick(View v) {
-        		
-        		
         		Context context = getApplicationContext();
         		CharSequence contentTitle = "Notification Details...";
         		CharSequence contentText = "Browse Android Official Site by clicking me";
