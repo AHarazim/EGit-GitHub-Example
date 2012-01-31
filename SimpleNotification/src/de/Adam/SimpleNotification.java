@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -24,6 +25,7 @@ public class SimpleNotification extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Log.d("TAG", "haha");
         
         mNotificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 		final Notification notifyDetails = new Notification(R.drawable.android,"New Alert, Click Me!",System.currentTimeMillis());
