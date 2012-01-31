@@ -17,6 +17,7 @@ public class SimpleNotification extends Activity {
 	
 	private NotificationManager mNotificationManager;
 	private int SIMPLE_NOTFICATION_ID;
+	private final String TAG = SimpleNotification.class.getSimpleName();
 	
     /** Called when the activity is first created. */
     @Override
@@ -29,8 +30,8 @@ public class SimpleNotification extends Activity {
 		final Notification notifyDetails = new Notification(R.drawable.android,"New Alert, Click Me!",System.currentTimeMillis());
 		
 
-        Button start = (Button)findViewById(R.id.notifyButton);
-        Button cancel = (Button)findViewById(R.id.cancelButton);
+        Button start = (Button)findViewById(R.id.bt_startservice);
+        Button cancel = (Button)findViewById(R.id.bt_stopservice);
         
         start.setOnClickListener(new OnClickListener() {
         	
@@ -55,5 +56,19 @@ public class SimpleNotification extends Activity {
         		mNotificationManager.cancel(SIMPLE_NOTFICATION_ID);
         	}
         });
+    }
+    
+    public void onButtonClick(View v){
+    	switch(v.getId()){
+    	
+    	case R.id.bt_startservice:
+    		
+			Log.d(TAG , "Start Service");
+    		break;
+    		
+    	case R.id.bt_stopservice:
+    		Log.d(TAG, "Stop Service");
+    		break;
+    	}
     }
 }
