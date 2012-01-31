@@ -1,7 +1,5 @@
 package de.Adam;
 
-import com.collabera.labs.sai.R;
-
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
